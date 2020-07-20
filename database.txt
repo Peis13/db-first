@@ -1,0 +1,41 @@
+auto_usate:
+
+ID: numero - SMALL - PRIMARY_KEY (AUTO_INCREMENT - UNIQUE)
+tipo_veicolo: stringa - VARCHAR(30) - NOTNULL
+marca: stringa - VARCHAR(50) - NOTNULL
+modello: stringa - VARCHAR(100) - NOTNULL
+generazione: stringa - VARCHAR(100)  - NULL
+anno_immatricolazione(MM/YYYY): data - DATE - NOTNULL
+descrizione: stringa - TEXT - NULL
+prezzo($): numero - MEDIUMINT - NOTNULL
+
+MOTORE
+alimentazione: stringa - VARCHAR(30) - NOTNULL
+cilindrata(cm^3): numero - SMALL - NOTNULL
+numero_cilindri: numero - TINYINT - NOTNULL
+potenza(kw): numero - SMALL - NOTNULL
+cavalli(cv): numero - SMALL - NOTNULL
+
+CARROZZERIA
+numero_posti: numero - TINYINT - NOTNULL
+numero_porte: numero - TINYINT - NOTNULL
+lunghezza(cm): numero - SMALL - NULL
+larghezza(cm): numero - SMALL - NULL
+altezza(cm): numero - SMALL - NULL
+peso(kg): numero - SMALL - NULL
+capacità_abitacolo(l): numero - SMALL - NULL
+capacità_baule(l): numero - SMALL - NULL
+
+TRASMISSIONE
+tipo_cambio: stringa - VARCHAR(20) - NOTNULL
+numero_rapporti: numero - TINYINT - NOTNULL
+trazione: stringa - VARCHAR(20) - NOTNULL
+
+PRESTAZIONI:
+velocità_massima(km/h): numero - SMALL - NULL
+accelerazione(s): numero - FLOAT(3, 1) - NULL
+consumo_urbano(km/l): numero - FLOAT(3, 1) - NOTNULL
+consumo_extraurbano(km/l): numero - FLOAT(3, 1) - NOTNULL
+capacità_serbatoio(l): numero - TINYINT - NULL
+classe_emissioni: stringa - VARCHAR(20) - NOTNULL
+emissioni_CO2(g/km): numero - FLOAT(5, 2) - NOTNULL
